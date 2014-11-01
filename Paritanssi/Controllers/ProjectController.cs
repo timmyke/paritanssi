@@ -60,9 +60,10 @@ namespace Paritanssi.Controllers
         [HttpGet]
         public ActionResult ViewProject(int id) {
             var model = new ViewProjectModel();
+            model.Project = _pser.FindById(id);
+            var testi = _pser.FindById(id);
 
-
-            return View();
+            return View(model);
         }
 
 	}

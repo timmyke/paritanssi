@@ -1,7 +1,38 @@
-﻿
+﻿@model Paritanssi.ViewModels.ViewProjectModel
 @{
     ViewBag.Title = "ViewProject";
 }
 
-<h2>ViewProject</h2>
 
+
+
+<br/>
+<div class="container">
+   <!-- <div class="jumbotron"> -->
+        <h1>@Model.Project.Name</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="lead">Todo</h2>
+                <div class="list-group">
+                    <a ng-href="#players/{{key}}" ng-repeat="(key, summoner) in summoners" class="list-group-item">{{summoner}}</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="lead">In production</h2>
+                <div class="list-group">
+                    <a class="list-group-item">Champ: {{champName}}</a>
+                    <a class="list-group-item">Played: {{played}} matches</a>
+                    <a class="list-group-item">Won: {{won}}, Lost: {{lost}}</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="lead">Done</h2>
+                <div class="list-group">
+                    <a class="list-group-item">Champ: {{champName}}</a>
+                    <a class="list-group-item">Played: {{played}} matches</a>
+                    <a class="list-group-item">Won: {{won}}, Lost: {{lost}}</a>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
