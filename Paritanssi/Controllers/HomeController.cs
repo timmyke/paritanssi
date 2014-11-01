@@ -10,36 +10,11 @@ using Paritanssi.ViewModels;
 namespace Paritanssi.Controllers
 {
     public class HomeController : Controller {
-        private ProjectService _pser;
-
-
-        public HomeController() {
-            _pser = new ProjectService();
-        }
-
-
         //
         // GET: /Home/
-        [HttpGet]
         public ActionResult Index() {
-
-            var service = new TaskService();
-
-            service.createTestData();
-            var model = new HomeIndexModel();
-
-            model.Projects = _pser.FindAll();
-
-
-            return View(model);
+            return RedirectToAction("Index", "Project");
         }
 
-        [HttpPost]
-        public ActionResult Index(HomeIndexModel model) {
-            _pser.Add(model.NewProject);
-            return RedirectToAction("Index");
-        }
-
-
-	}
+    }
 }

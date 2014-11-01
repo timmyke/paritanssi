@@ -1,0 +1,20 @@
+﻿@model Paritanssi.ViewModels.HomeIndexModel
+@{
+    ViewBag.Title = "Troldemort";
+}
+
+<h2>Paritanssi management system</h2>
+
+
+
+Lisää uusi projekti:<br/>
+@using (Html.BeginForm(null, null, FormMethod.Post, new {name = "form", id = "form"})) {
+    @Html.EditorFor(m => m.NewProject.Name)
+    <input type="submit" value="Tallenna"/>
+}
+
+<br/>
+Projektit:<br/>
+@foreach (var row in Model.Projects) {
+    @row.Name<br/>
+}
