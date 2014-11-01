@@ -43,13 +43,6 @@ namespace Paritanssi.Controllers
         public ActionResult ViewTasks(ViewTasksModel model) {
             var task = model.NewTask;
             var pid = model.Project.Id;
-            var project = _pser.FindById(pid);
-
-            //var task = new Task
-            //    {
-            //        Description = model.NewTask.Description,
-            //        ProjectId = pid 
-            //    };
 
             task.ProjectId = pid;
             _taskService.Add(task);

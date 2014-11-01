@@ -16,7 +16,7 @@
                 @using (Html.BeginForm(null, null, FormMethod.Post, new {name = "form", id = "form"})) {
                     @Html.HiddenFor(m => m.Project.Id);
                     <div id="New" class="collapse">
-                        <p>Name: <br/>
+                        <p>Name: @Html.EditorFor(m => m.NewTask.Name)<br/>
                             Description: @Html.EditorFor(m => m.NewTask.Description)</p>
                         <button type="submit" class="btn btn-success">OK</button><br/><br/>
                     </div>
@@ -30,7 +30,7 @@
                         <div class="row">
                             <a class="list-group-item pull-left" href="/Task/Demote?id=@row.Id&projectid"><span class="glyphicon glyphicon-backward"></span></a>
                             <a class="list-group-item pull-right" href="/Task/Promote?id=@row.Id"><span class="glyphicon glyphicon-forward"></span></a>
-                            <a class="list-group-item col-md-10" data-toggle="collapse" data-target="#@row.Id">@row.Description</a>
+                            <a class="list-group-item col-md-10" data-toggle="collapse" data-target="#@row.Id">@row.Name</a>
                         </div>
                         <div id="@row.Id" class="collapse">
                             <p>@row.Description</p>
@@ -47,7 +47,7 @@
                         <div class="row">
                             <a class="list-group-item pull-left" href="/Task/Demote?id=@row.Id&projectid"><span class="glyphicon glyphicon-backward"></span></a>
                             <a class="list-group-item pull-right" href="/Task/Promote?id=@row.Id"><span class="glyphicon glyphicon-forward"></span></a>
-                            <a class="list-group-item col-md-10" data-toggle="collapse" data-target="#@row.Id">@row.Description</a>
+                            <a class="list-group-item col-md-10" data-toggle="collapse" data-target="#@row.Id">@row.Name</a>
                         </div>
                         <div id="@row.Id" class="collapse">
                             <p>@row.Description</p>
@@ -65,7 +65,7 @@
                         <div class="row">
                             <a class="list-group-item pull-left" href="/Task/Demote?id=@row.Id&projectid"><span class="glyphicon glyphicon-backward"></span></a>
                             <a class="list-group-item pull-right" href="/Task/Promote?id=@row.Id"><span class="glyphicon glyphicon-forward"></span></a>
-                            <a class="list-group-item col-md-10" data-toggle="collapse" data-target="#@row.Id">@row.Description</a>
+                            <a class="list-group-item col-md-10" data-toggle="collapse" data-target="#@row.Id">@row.Name</a>
                         </div>
                         <div id="@row.Id" class="collapse">
                             <p>@row.Description</p>
