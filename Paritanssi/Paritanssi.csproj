@@ -166,7 +166,7 @@
     <Compile Include="Models\Task.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Logic\ProjectLogic\ProjectService.cs" />
-    <Compile Include="Logic\TaskService.cs" />
+    <Compile Include="Logic\TaskLogic\TaskService.cs" />
     <Compile Include="ViewModels\ProjectListViewModel.cs" />
     <Compile Include="ViewModels\ViewTasksModel.cs" />
   </ItemGroup>

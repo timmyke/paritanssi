@@ -17,7 +17,10 @@ namespace Paritanssi.ViewModels {
         /// <summary>s
         /// Annetaan mahdollisuus luoda uusi taski
         /// </summary>
-        public Task NewTask { get { return _task ?? new Task(); } set { _task = value; } }
+        public Task NewTask {
+            get { return _task ?? new Task(); }
+            set { _task = value; }
+        }
 
         /// <summary>
         /// Projektiin kuuluvat taskit

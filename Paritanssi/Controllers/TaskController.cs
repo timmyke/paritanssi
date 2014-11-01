@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 using Paritanssi.Logic.ProjectLogic;
+using Paritanssi.Logic.TaskLogic;
+using Paritanssi.Models;
 using Paritanssi.ViewModels;
 
 namespace Paritanssi.Controllers
@@ -11,10 +14,12 @@ namespace Paritanssi.Controllers
     public class TaskController : Controller
     {
 
-        private ProjectService _pser;
+        private readonly ProjectService _pser;
+        private TaskService _taskService;
 
         public TaskController() {
             _pser = new ProjectService();
+            _taskService = new TaskService();
         }
 
 
@@ -26,17 +31,25 @@ namespace Paritanssi.Controllers
         [HttpGet]
         public ActionResult ViewTasks(int id) {
             var model = new ViewTasksModel {Project = _pser.FindById(id)};
-            var testi = _pser.FindById(id);
-
+            
             return View(model);
         }
 
         [HttpPost]
         public ActionResult ViewTasks(ViewTasksModel model) {
             var task = model.NewTask;
-            task.ProjectId = model.Project.Id;
+            var pid = model.Project.Id;
+            var project = _pser.FindById(pid);
 
-            return RedirectToAction("ViewTasks");
+            //var task = new Task
+            //    {
+            //        Description = model.NewTask.Description,
+            //        ProjectId = pid 
+            //    };
+
+            task.ProjectId = pid;
+            _taskService.Add(task);
+            return RedirectToAction("ViewTasks", new { id = pid});
         }
 	}
 }

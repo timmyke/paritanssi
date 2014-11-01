@@ -1,19 +1,23 @@
 ﻿using Paritanssi.DAL;
+using Paritanssi.Models;
 
 namespace Paritanssi.Logic.TaskLogic {
     public class TaskService {
 
-        public TaskService() {}
-
-
-        public void createTestData() {
-            var context = new DatabaseContext();
-            //var taski = new Task();
-            //taski.Description = "testi";
-
-            //context.Projects.Add(taski);
-            //context.SaveChanges();
-
+        // Tähän väliin ei jaskettu tunkea omaa repoa.
+        private DatabaseContext _db;
+        public TaskService() {
+            _db = new DatabaseContext();
         }
+
+        public TaskService(DatabaseContext db) {
+            _db = db;
+        }
+
+        public void Add(Task task) {
+            _db.Tasks.Add(task);
+            _db.SaveChanges();
+        }
+
     }
 }

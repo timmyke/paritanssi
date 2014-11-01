@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Paritanssi.Logic.ProjectLogic;
-using Paritanssi.Services;
 using Paritanssi.ViewModels;
 
 namespace Paritanssi.Controllers

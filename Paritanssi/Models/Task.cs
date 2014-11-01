@@ -9,6 +9,9 @@ namespace Paritanssi.Models {
 
         public Task() {
             WhenMade = DateTime.Now;
+            Id = 0;
+            Status = 0;
+            ProjectId = 0;
         }
 
             [Key]

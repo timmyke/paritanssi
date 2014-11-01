@@ -15,18 +15,22 @@
                 
                 @using (Html.BeginForm(null, null, FormMethod.Post, new {name = "form", id = "form"})) {
                     @Html.HiddenFor(m => m.Project.Id);
-                        <div id="New" class="collapse">
+                    <div id="New" class="collapse">
                         <p>Name: <br/>
-                            Description: @Html.EditorFor(m => m.NewTask.Description)</p>
+                         Description: @Html.EditorFor(m => m.NewTask.Description)</p>
                         <button type="submit" class="btn btn-success">OK</button><br/><br/>
                     </div>
                 }
                 
 
                 <div class="list-group">
-                    <a class="list-group-item" data-toggle="collapse" data-target="#test">Eka</a>
+                    <div class="row">
+                        <a class="list-group-item pull-left"><span class="glyphicon glyphicon-backward"></span></a>
+                        <a class="list-group-item pull-right"><span class="glyphicon glyphicon-forward"></span></a>
+                    <a class="list-group-item col-md-10" data-toggle="collapse" data-target="#test">Eka</a>
+                    </div>
                     <div id="test" class="collapse">
-                        <p>Lololol.</p>
+                        <p>Move</p>
                     </div>
                 </div>
             </div>

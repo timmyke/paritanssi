@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Paritanssi.Logic.ProjectLogic;
-using Paritanssi.Services;
+using Paritanssi.Logic.TaskLogic;
 using Paritanssi.ViewModels;
 
 namespace Paritanssi.Controllers
@@ -29,14 +29,10 @@ namespace Paritanssi.Controllers
         /// <returns></returns>
         [HttpGet]
         public ActionResult Index() {
-
-            var service = new TaskService();
-
-            service.createTestData();
-            var model = new ProjectListViewModel();
-
-            model.Projects = _pser.FindAll();
-
+            var model = new ProjectListViewModel
+                {
+                    Projects = _pser.FindAll()
+                };
 
             return View(model);
         }
