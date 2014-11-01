@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Paritanssi.DAL;
 using Paritanssi.Logic.ProjectLogic;
 using Paritanssi.Models;
 
@@ -28,6 +29,11 @@ namespace Paritanssi.Logic.ProjectLogic {
         public ICollection<Project> FindAll() {
             return _repo.FindAll();
         } 
+
+        public Project FindById(int id) {
+            var context = new DatabaseContext();
+            return context.Projects.Find(id);
+        }
 
     }
 }

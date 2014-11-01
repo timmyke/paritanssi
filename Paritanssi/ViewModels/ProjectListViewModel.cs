@@ -5,7 +5,7 @@ using System.Web;
 using Paritanssi.Models;
 
 namespace Paritanssi.ViewModels {
-    public class HomeIndexModel {
+    public class ProjectListViewModel {
         private Project _project;
         private ICollection<Project> _projects; 
 

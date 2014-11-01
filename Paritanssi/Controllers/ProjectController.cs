@@ -11,7 +11,10 @@ namespace Paritanssi.Controllers
 {
     public class ProjectController : Controller
     {
-    private ProjectService _pser;
+        /// <summary>
+        /// Projekti-olioihin liittyvä toiminnallisuus
+        /// </summary>
+        private ProjectService _pser;
 
 
         public ProjectController() {
@@ -19,15 +22,18 @@ namespace Paritanssi.Controllers
         }
 
 
-        //
-        // GET: /Home/
+        /// <summary>
+        /// Index-sivu, jossa myös uuden projektin luonti ja 
+        /// olemassaolevien listaus.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Index() {
 
             var service = new TaskService();
 
             service.createTestData();
-            var model = new HomeIndexModel();
+            var model = new ProjectListViewModel();
 
             model.Projects = _pser.FindAll();
 
@@ -35,12 +41,29 @@ namespace Paritanssi.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// Uuden projektin luominen tietokantaan
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
-        public ActionResult Index(HomeIndexModel model) {
+        public ActionResult Index(ProjectListViewModel model) {
             _pser.Add(model.NewProject);
             return RedirectToAction("Index");
         }
 
+        /// <summary>
+        /// Projektiin liittyvän tavaran tarkastelu
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public ActionResult ViewProject(int id) {
+            var model = new ViewProjectModel();
+
+
+            return View();
+        }
 
 	}
 }

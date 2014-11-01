@@ -36,3 +36,41 @@ C:\Users\Timi\Documents\Visual Studio 2012\Projects\Paritanssi\Paritanssi\bin\Sy
 C:\Users\Timi\Documents\Visual Studio 2012\Projects\Paritanssi\Paritanssi\obj\Debug\Paritanssi.dll
 C:\Users\Timi\Documents\Visual Studio 2012\Projects\Paritanssi\Paritanssi\obj\Debug\Paritanssi.pdb
 C:\Users\Timi\Documents\Visual Studio 2012\Projects\Paritanssi\Paritanssi\obj\Debug\Paritanssi.csprojResolveAssemblyReference.cache
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\obj\Debug\Paritanssi.csprojResolveAssemblyReference.cache
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\obj\Debug\Paritanssi.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\Paritanssi.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\Paritanssi.pdb
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\EntityFramework.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\EntityFramework.SqlServer.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\Microsoft.CSharp.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.ComponentModel.DataAnnotations.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Configuration.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Data.DataSetExtensions.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Data.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Drawing.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.EnterpriseServices.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.ApplicationServices.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.DynamicData.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Entity.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Extensions.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Helpers.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Mvc.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Razor.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Services.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Webpages.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Webpages.Razor.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Xml.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Xml.Linq.dll
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\EntityFramework.xml
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\EntityFramework.SqlServer.xml
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Razor.xml
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Webpages.xml
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Webpages.Razor.xml
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Helpers.xml
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Mvc.xml
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\obj\Debug\Paritanssi.pdb
