@@ -7,14 +7,20 @@
 
 
 
-Lisää uusi projekti:<br/>
+Lisää uusi projekti:<br />
 @using (Html.BeginForm(null, null, FormMethod.Post, new {name = "form", id = "form"})) {
     @Html.EditorFor(m => m.NewProject.Name)
-    <input type="submit" value="Tallenna"/>
+    <input type="submit" value="Tallenna" />
 }
 
-<br/>
-Projektit:<br/>
+<br />
+Projektit:<br />
+
+<div class="list-group">
+
 @foreach (var row in Model.Projects) {
-    @row.Name<br/>
+    <div class="row">
+        <a class="list-group-item col-md-6" href="Task/ViewTasks?id=@row.Id">@row.Name</a><br />
+    </div>
 }
+</div>
