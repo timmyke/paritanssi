@@ -36,8 +36,6 @@ C:\Users\Timi\Documents\Visual Studio 2012\Projects\Paritanssi\Paritanssi\bin\Sy
 C:\Users\Timi\Documents\Visual Studio 2012\Projects\Paritanssi\Paritanssi\obj\Debug\Paritanssi.dll
 C:\Users\Timi\Documents\Visual Studio 2012\Projects\Paritanssi\Paritanssi\obj\Debug\Paritanssi.pdb
 C:\Users\Timi\Documents\Visual Studio 2012\Projects\Paritanssi\Paritanssi\obj\Debug\Paritanssi.csprojResolveAssemblyReference.cache
-C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\obj\Debug\Paritanssi.csprojResolveAssemblyReference.cache
-C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\obj\Debug\Paritanssi.dll
 C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\Paritanssi.dll
 C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\Paritanssi.pdb
 C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\EntityFramework.dll
@@ -73,4 +71,6 @@ C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Webpages.Dep
 C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Webpages.Razor.xml
 C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Helpers.xml
 C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\bin\System.Web.Mvc.xml
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\obj\Debug\Paritanssi.dll
 C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\obj\Debug\Paritanssi.pdb
+C:\Users\Timi\Documents\GitHub\paritanssi\Paritanssi\obj\Debug\Paritanssi.csprojResolveAssemblyReference.cache
