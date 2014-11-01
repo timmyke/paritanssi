@@ -14,16 +14,40 @@ namespace Paritanssi.Models {
             ProjectId = 0;
         }
 
-            [Key]
-            public int Id { get; set; }
+        /// <summary>
+        /// Taskin  id
+        /// </summary>
+        [Key]
+        public int Id { get; set; }
 
-            [Required]
-            public int ProjectId { get; set; }
-            public int Status { get; set; }
-            public string Description { get; set; }
-            public DateTime WhenMade { get; set; }
+        /// <summary>
+        /// Mihin projektiin taski kuuluu.
+        /// </summary>
+        [Required]
+        public int ProjectId { get; set; }
 
-        
+        /// <summary>
+        /// Taskin nimi
+        /// </summary>
+        [Required]
+        public String Name { get; set; }
+
+        /// <summary>
+        /// Taskin tila
+        /// </summary>
+        public int Status { get; set; }
+
+        /// <summary>
+        /// Taskin kuvaus
+        /// </summary>
+        public string Description { get; set; }
+
+        /// <summary>
+        /// Koska tehtiin
+        /// </summary>
+        public DateTime WhenMade { get; set; }
+
+
     }
 }
 
