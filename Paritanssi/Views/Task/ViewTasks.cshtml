@@ -1,0 +1,50 @@
+﻿@model Paritanssi.ViewModels.ViewTasksModel
+@{
+    ViewBag.Title = "Paritanssi Management System";
+}
+
+
+
+
+<br/>
+<div class="container">
+        <h1>@Model.Project.Name</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="lead">Todo <a class="list-group-item" data-toggle="collapse" data-target="#New">+ New</a></h2>
+                
+                @using (Html.BeginForm(null, null, FormMethod.Post, new {name = "form", id = "form"})) {
+                    @Html.HiddenFor(m => m.Project.Id);
+                        <div id="New" class="collapse">
+                        <p>Name: <br/>
+                            Description: @Html.EditorFor(m => m.NewTask.Description)</p>
+                        <button type="submit" class="btn btn-success">OK</button><br/><br/>
+                    </div>
+                }
+                
+
+                <div class="list-group">
+                    <a class="list-group-item" data-toggle="collapse" data-target="#test">Eka</a>
+                    <div id="test" class="collapse">
+                        <p>Lololol.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2 class="lead">In production</h2>
+                <div class="list-group">
+                    <a class="list-group-item">Champ:</a>
+                    <a class="list-group-item">Played</a>
+                    <a class="list-group-item">Won</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2 class="lead">Done</h2>
+                <div class="list-group">
+                    <a class="list-group-item">Champ</a>
+                    <a class="list-group-item">Played</a>
+                    <a class="list-group-item">Won</a>
+                </div>
+            </div>
+        </div>
+</div>

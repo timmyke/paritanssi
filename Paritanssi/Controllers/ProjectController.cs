@@ -52,19 +52,8 @@ namespace Paritanssi.Controllers
             return RedirectToAction("Index");
         }
 
-        /// <summary>
-        /// Projektiin liittyvän tavaran tarkastelu
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        [HttpGet]
-        public ActionResult ViewProject(int id) {
-            var model = new ViewProjectModel();
-            model.Project = _pser.FindById(id);
-            var testi = _pser.FindById(id);
+        
 
-            return View(model);
-        }
 
 	}
 }

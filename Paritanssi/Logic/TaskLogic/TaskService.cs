@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Paritanssi.DAL;
-using Paritanssi.Models;
+﻿using Paritanssi.DAL;
 
-namespace Paritanssi.Services {
+namespace Paritanssi.Logic.TaskLogic {
     public class TaskService {
 
         public TaskService() {}
