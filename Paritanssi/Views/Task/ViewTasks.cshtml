@@ -17,37 +17,60 @@
                     @Html.HiddenFor(m => m.Project.Id);
                     <div id="New" class="collapse">
                         <p>Name: <br/>
-                         Description: @Html.EditorFor(m => m.NewTask.Description)</p>
+                            Description: @Html.EditorFor(m => m.NewTask.Description)</p>
                         <button type="submit" class="btn btn-success">OK</button><br/><br/>
                     </div>
                 }
                 
-
+                <!-- Eka column -->
                 <div class="list-group">
-                    <div class="row">
-                        <a class="list-group-item pull-left"><span class="glyphicon glyphicon-backward"></span></a>
-                        <a class="list-group-item pull-right"><span class="glyphicon glyphicon-forward"></span></a>
-                    <a class="list-group-item col-md-10" data-toggle="collapse" data-target="#test">Eka</a>
-                    </div>
-                    <div id="test" class="collapse">
-                        <p>Move</p>
-                    </div>
+                    
+                    @* Sori hattuvakiosta.... *@
+                    @foreach (var row in Model.Tasks.Where(m => m.Status == 0)) {
+                        <div class="row">
+                            <a class="list-group-item pull-left" href="/Task/Demote?id=@row.Id&projectid"><span class="glyphicon glyphicon-backward"></span></a>
+                            <a class="list-group-item pull-right" href="/Task/Promote?id=@row.Id"><span class="glyphicon glyphicon-forward"></span></a>
+                            <a class="list-group-item col-md-10" data-toggle="collapse" data-target="#@row.Id">@row.Description</a>
+                        </div>
+                        <div id="@row.Id" class="collapse">
+                            <p>@row.Description</p>
+                        </div>
+                    }
                 </div>
             </div>
+            
+            <!-- In production -->
             <div class="col-md-4">
                 <h2 class="lead">In production</h2>
                 <div class="list-group">
-                    <a class="list-group-item">Champ:</a>
-                    <a class="list-group-item">Played</a>
-                    <a class="list-group-item">Won</a>
+                     @foreach (var row in Model.Tasks.Where(m => m.Status == 1)) {
+                        <div class="row">
+                            <a class="list-group-item pull-left" href="/Task/Demote?id=@row.Id&projectid"><span class="glyphicon glyphicon-backward"></span></a>
+                            <a class="list-group-item pull-right" href="/Task/Promote?id=@row.Id"><span class="glyphicon glyphicon-forward"></span></a>
+                            <a class="list-group-item col-md-10" data-toggle="collapse" data-target="#@row.Id">@row.Description</a>
+                        </div>
+                        <div id="@row.Id" class="collapse">
+                            <p>@row.Description</p>
+                        </div>
+                    }
                 </div>
             </div>
+            
+            
+            <!-- Done -->
             <div class="col-md-4">
                 <h2 class="lead">Done</h2>
                 <div class="list-group">
-                    <a class="list-group-item">Champ</a>
-                    <a class="list-group-item">Played</a>
-                    <a class="list-group-item">Won</a>
+                     @foreach (var row in Model.Tasks.Where(m => m.Status == 2)) {
+                        <div class="row">
+                            <a class="list-group-item pull-left" href="/Task/Demote?id=@row.Id&projectid"><span class="glyphicon glyphicon-backward"></span></a>
+                            <a class="list-group-item pull-right" href="/Task/Promote?id=@row.Id"><span class="glyphicon glyphicon-forward"></span></a>
+                            <a class="list-group-item col-md-10" data-toggle="collapse" data-target="#@row.Id">@row.Description</a>
+                        </div>
+                        <div id="@row.Id" class="collapse">
+                            <p>@row.Description</p>
+                        </div>
+                    }
                 </div>
             </div>
         </div>

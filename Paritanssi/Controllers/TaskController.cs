@@ -30,8 +30,12 @@ namespace Paritanssi.Controllers
         /// <returns></returns>
         [HttpGet]
         public ActionResult ViewTasks(int id) {
-            var model = new ViewTasksModel {Project = _pser.FindById(id)};
-            
+            var model = new ViewTasksModel
+                {
+                    Project = _pser.FindById(id), 
+                    Tasks = _taskService.FindByProject(id)
+                };
+
             return View(model);
         }
 
@@ -50,6 +54,31 @@ namespace Paritanssi.Controllers
             task.ProjectId = pid;
             _taskService.Add(task);
             return RedirectToAction("ViewTasks", new { id = pid});
+        }
+
+        /// <summary>
+        /// Taskin vieminen seuraavaan tilaan...
+        /// GET sallitaan kiireen vuoksi.... :/
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ActionResult Promote(int id) {
+            _taskService.Promote(id);
+            int pid = _taskService.FindById(id).ProjectId;
+            return RedirectToAction("ViewTasks", new { id = pid });
+        }
+
+
+        /// <summary>
+        /// Taskin laskeminen aiempaan tilaan.
+        /// GET sallitaan kiireen vuoksi.... :/
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ActionResult Demote(int id) {
+            _taskService.Demote(id);
+            int pid = _taskService.FindById(id).ProjectId;
+            return RedirectToAction("ViewTasks", new { id = pid });
         }
 	}
 }
